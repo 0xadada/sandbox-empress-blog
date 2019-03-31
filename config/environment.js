@@ -24,7 +24,7 @@ module.exports = function(environment) {
     },
 
     blog: {
-      title: 'empress-blog',
+      title: 'homepage',
       description: 'Static Blog System - Built with Ember',
       coverImage: '/images/blog-cover.jpg',
 
@@ -32,7 +32,7 @@ module.exports = function(environment) {
         label: 'Home',
         route: 'index'
       }, {
-        label: 'Built by Chris Manson',
+        label: 'Built by 0xADADA',
         route: 'page',
         id: 'chris-manson'
       }]
@@ -70,7 +70,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/sandbox-empress-blog/';
     // here you can enable a production-specific feature
+    ENV.blog.host = 'https://0xadada.pub'
   }
 
   return ENV;
